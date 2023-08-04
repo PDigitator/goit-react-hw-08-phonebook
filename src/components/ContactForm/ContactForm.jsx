@@ -2,12 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Report } from 'notiflix';
 
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 
 import Button from 'components/Button/Button';
 
 import { Form, Label, Input } from 'components/ContactForm/ContactForm.styled';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 
 const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -18,7 +18,7 @@ const ContactForm = () => {
     event.preventDefault();
     const form = event.target;
     const { name, number } = form.elements;
-    const newContact = { name: name.value, phone: number.value };
+    const newContact = { name: name.value, number: number.value };
     if (
       contacts.some(
         contact => contact.name.toLowerCase() === name.value.toLowerCase()
