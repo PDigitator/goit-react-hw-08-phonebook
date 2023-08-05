@@ -15,7 +15,7 @@ const ContactForm = () => {
     event.preventDefault();
     const form = event.target;
     const { name, number } = form.elements;
-    const newContact = { name: name.value, phone: number.value };
+    const newContact = { name: name.value, number: number.value };
     if (
       contacts.some(
         contact => contact.name.toLowerCase() === name.value.toLowerCase()
