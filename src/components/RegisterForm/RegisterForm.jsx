@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 
+import { register } from 'redux/auth/operations';
 import Section from 'components/Section';
 import Button from 'components/Button';
-import { register } from 'redux/auth/operations';
 import { Form, Input, Label } from 'components/ContactForm/ContactForm.styled';
 
 const RegisterForm = () => {

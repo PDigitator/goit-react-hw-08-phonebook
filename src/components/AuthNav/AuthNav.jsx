@@ -1,5 +1,4 @@
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-
 import { List, StyledNavLink } from 'components/Navigation/Navigation.styled';
 
 const AuthNav = () => {

@@ -1,8 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-
-import { Header, Container, List, StyledNavLink } from './Navigation.styled';
+import { List, StyledNavLink } from 'components/Navigation/Navigation.styled';
 
 const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

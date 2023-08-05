@@ -1,8 +1,9 @@
-import Button from 'components/Button/Button';
-import { Form, Input, Label } from 'components/ContactForm/ContactForm.styled';
-import Section from 'components/Section/Section';
 import { useDispatch } from 'react-redux';
+
 import { logIn } from 'redux/auth/operations';
+import Section from 'components/Section';
+import Button from 'components/Button';
+import { Form, Input, Label } from 'components/ContactForm/ContactForm.styled';
 
 const LoginForm = () => {
   const dispatch = useDispatch();

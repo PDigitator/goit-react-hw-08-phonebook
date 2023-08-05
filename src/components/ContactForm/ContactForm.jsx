@@ -1,13 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-
 import { Report } from 'notiflix';
 
 import { selectContacts } from 'redux/contacts/selectors';
-
-import Button from 'components/Button/Button';
-
-import { Form, Label, Input } from 'components/ContactForm/ContactForm.styled';
 import { addContact } from 'redux/contacts/operations';
+import Button from 'components/Button';
+import { Form, Label, Input } from 'components/ContactForm/ContactForm.styled';
 
 const ContactForm = () => {
   const contacts = useSelector(selectContacts);

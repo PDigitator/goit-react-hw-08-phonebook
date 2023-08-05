@@ -8,16 +8,14 @@ const Form = styled.form`
 `;
 
 const Label = styled.label`
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 
-  width: 80%;
-
   font-size: 20px;
-
   color: #516174;
 `;
 
