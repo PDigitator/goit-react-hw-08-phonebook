@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 const Btn = styled.button`
   width: 80%;
-  height: 40px;
-  padding: 0;
-  border-radius: 20px;
+  padding: 4px 0;
+  border-radius: 18px;
 
   border: 2px solid #e5eaf1;
   cursor: pointer;
@@ -12,7 +11,9 @@ const Btn = styled.button`
   background-color: #f3f6f9;
   text-transform: capitalize;
   font-size: 20px;
-  color: #768696;
+  color: #516174;
+
+  transition: all var(--animation-duration) var(--timing-function);
 
   &:hover,
   &:focus {

@@ -7,13 +7,12 @@ import {
 } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
 
-import Loader from 'components/Loader/Loader';
-
-import { Container, MainTitle, Title } from 'components/App.styled';
-import ContactForm from 'components/ContactForm/ContactForm';
-import SearchFilter from 'components/SearchFIlter/SearchFIlter';
-import ContactList from 'components/ContactList/ContactList';
-import Notification from 'components/Notification/Notification';
+import Section from 'components/Section/Section';
+import ContactForm from 'components/ContactForm';
+import Loader from 'components/Loader';
+import SearchFilter from 'components/SearchFilter';
+import ContactList from 'components/ContactList';
+import Notification from 'components/Notification';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -27,18 +26,22 @@ const Contacts = () => {
   const contacts = useSelector(selectContacts);
 
   return (
-    <Container>
-      <MainTitle>Phonebook</MainTitle>
-      <ContactForm />
-      <Title>Contacts</Title>
-      <SearchFilter />
-      {isLoading && !error && <Loader />}
-      {contacts.length ? (
-        <ContactList />
-      ) : (
-        <Notification message="There are no contacts in the phone book" />
-      )}
-    </Container>
+    <>
+      <Section title="Phonebook">
+        <ContactForm />
+      </Section>
+      <Section title="Contacts">
+        {isLoading && !error && <Loader />}
+        {contacts.length ? (
+          <>
+            <SearchFilter />
+            <ContactList />
+          </>
+        ) : (
+          <Notification message="There are no contacts in the phone book" />
+        )}
+      </Section>
+    </>
   );
 };
 

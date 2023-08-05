@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 const Paragraph = styled.p`
-  /* padding: 30px;
-  padding-top: 0; */
-
   font-size: 18px;
   color: #112236;
 `;
@@ -14,6 +11,7 @@ const Span = styled.span`
 
 const Btn = styled.button`
   width: 20%;
+  min-width: 56px;
   height: 30px;
   padding: 0;
   border-radius: 15px;
@@ -24,7 +22,9 @@ const Btn = styled.button`
   background-color: #f3f6f9;
   text-transform: capitalize;
   font-size: 16px;
-  color: #768696;
+  color: #516174;
+
+  transition: all var(--animation-duration) var(--timing-function);
 
   &:hover,
   &:focus {

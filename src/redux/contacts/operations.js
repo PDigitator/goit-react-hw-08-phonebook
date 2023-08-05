@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Report } from 'notiflix';
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com'; //!
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com'; //?
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -38,6 +38,7 @@ export const deleteContact = createAsyncThunk(
       return response.data;
     } catch (error) {
       Report.failure('ERROR', `${error.message} Please Try Later`, 'Close');
+
       return thunkAPI.rejectWithValue(error);
     }
   }

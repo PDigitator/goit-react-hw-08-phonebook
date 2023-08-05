@@ -1,33 +1,9 @@
-import { NavLink } from 'react-router-dom';
-
 import styled from 'styled-components';
 
-// const Header = styled.header`
-//   position: sticky;
-//   top: -1px;
-//   z-index: 1100;
-
-//   padding: 20px 0;
-//   background-color: rgb(241 243 244);
-//   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-//     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-// `;
-
-// const Container = styled.div`
-//   max-width: 1440px;
-//   padding-right: 16px;
-//   padding-left: 16px;
-//   margin-left: auto;
-//   margin-right: auto;
-// `;
-
-const List = styled.ul`
+const UserWrap = styled.div`
   display: flex;
+  align-items: center;
   gap: 40px;
-
-  @media screen and (max-width: 768px) {
-    gap: 12px;
-  }
 
   @media screen and (max-width: 599px) {
     gap: 12px;
@@ -35,7 +11,30 @@ const List = styled.ul`
   }
 `;
 
-const StyledNavLink = styled(NavLink)`
+const Paragraph = styled.p`
+  color: #112236;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 768px) {
+    width: 35vw;
+    max-width: 150px;
+  }
+
+  @media screen and (max-width: 425px) {
+    max-width: 110px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: 0.02em;
+
+    word-wrap: break-word;
+  }
+`;
+
+const BtnOut = styled.button`
   display: block;
   width: 35vw;
   max-width: 150px;
@@ -74,4 +73,4 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-export { List, StyledNavLink };
+export { UserWrap, Paragraph, BtnOut };

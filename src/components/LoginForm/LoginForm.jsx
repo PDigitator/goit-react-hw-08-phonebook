@@ -1,7 +1,10 @@
+import Button from 'components/Button/Button';
+import { Form, Input, Label } from 'components/ContactForm/ContactForm.styled';
+import Section from 'components/Section/Section';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
@@ -17,16 +20,20 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <Section>
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <Label>
+          Email
+          <Input type="email" name="email" />
+        </Label>
+        <Label>
+          Password
+          <Input type="password" name="password" />
+        </Label>
+        <Button text="Log In" />
+      </Form>
+    </Section>
   );
 };
+
+export default LoginForm;

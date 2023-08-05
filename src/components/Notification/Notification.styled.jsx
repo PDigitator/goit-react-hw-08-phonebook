@@ -5,7 +5,7 @@ const Paragraph = styled.p`
 
   font-style: italic;
   font-size: 18px;
-  color: #768696;
+  color: #516174;
 `;
 
 export { Paragraph };

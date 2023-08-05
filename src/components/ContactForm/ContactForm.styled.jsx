@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-bottom: 30px;
 `;
 
 const Label = styled.label`
@@ -18,8 +17,8 @@ const Label = styled.label`
   width: 80%;
 
   font-size: 20px;
-  font-weight: bold;
-  color: #768696;
+
+  color: #516174;
 `;
 
 const Input = styled.input`
@@ -31,5 +30,19 @@ const Input = styled.input`
   font-size: 20px;
   color: #112236 !important;
 `;
+
+Report.init({
+  backgroundColor: '#e5eaf1',
+  titleFontSize: '24px',
+  messageFontSize: '18px',
+  info: {
+    svgColor: '#112236',
+    titleColor: '#112236',
+    messageColor: '#112236',
+    buttonBackground: '#516174',
+    buttonColor: '#112236',
+    backOverlayColor: 'rgb(118, 134, 150, 0.8)',
+  },
+});
 
 export { Form, Label, Input };
