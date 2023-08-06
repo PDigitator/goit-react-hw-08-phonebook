@@ -14,7 +14,7 @@ const UserMenu = () => {
 
   return (
     <UserWrap>
-      <Paragraph>{user.email}</Paragraph>
+      <Paragraph>{user.name}</Paragraph>
       <BtnOut type="button" onClick={() => dispatch(logOut())}>
         Log Out
       </BtnOut>
